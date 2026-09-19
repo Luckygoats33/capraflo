@@ -63,6 +63,7 @@ body::before {
 }
 
 body.nav-open { overflow: hidden; }
+body.nav-open .preview-banner { visibility: hidden; }
 
 a { color: var(--indigo-2); text-decoration: none; transition: color 0.2s var(--ease); }
 a:hover { color: var(--gold); }
@@ -504,18 +505,18 @@ h1, h2, h3, h4, .display {
 .phone {
   width: min(100%, 320px);
   margin-inline: auto;
-  background: #0e0e10;
-  border: 1px solid var(--line-strong);
+  background: #2a2a30;
+  border: 1px solid rgba(236, 230, 220, 0.22);
   border-radius: 28px;
-  padding: 10px;
+  padding: 12px 10px 14px;
   box-shadow: 0 30px 70px -28px rgba(0, 0, 0, 0.7);
 }
 .phone-notch {
-  width: 92px;
-  height: 16px;
+  width: 96px;
+  height: 18px;
   border-radius: 0 0 12px 12px;
-  background: #0e0e10;
-  margin: -10px auto 8px;
+  background: #16161a;
+  margin: -12px auto 10px;
 }
 .phone-screen {
   border-radius: 20px;
@@ -1263,23 +1264,24 @@ h1, h2, h3, h4, .display {
   .trust-row { grid-template-columns: 1fr 1fr; }
   .trust-item { border-left: none; border-top: 1px solid var(--line); padding: 12px 0; }
   .trust-item:nth-child(-n+2) { border-top: none; }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; position: relative; z-index: 110; }
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: fixed;
+    inset: 0;
+    top: 0;
+    z-index: 95;
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
     gap: 0;
-    padding: 12px 20px 20px;
-    background: rgba(11, 11, 13, 0.97);
-    border-bottom: 1px solid var(--line);
+    padding: 72px 24px 40px;
+    background: #0b0b0d;
+    overflow-y: auto;
   }
   .nav-links.is-open { display: flex; }
-  .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .nav-links a.btn { margin-top: 12px; border-bottom: none; }
+  .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .nav-links a.btn { margin-top: 20px; border-bottom: none; }
   .admin { grid-template-columns: 1fr; }
   .admin-rail { display: none; }
   .flow-step { grid-template-columns: 44px 1fr; gap: 16px; }
