@@ -714,13 +714,6 @@ h1, h2, h3, h4, .display {
   position: relative;
   overflow: hidden;
 }
-.shop-media::after {
-  content: "";
-  position: absolute;
-  inset: 18% 28%;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 40% 40% 46% 46%;
-}
 .shop-name { font-family: var(--display); font-size: 1.05rem; letter-spacing: -0.03em; line-height: 1.15; }
 .shop-price { font-size: 0.82rem; font-weight: 700; color: var(--shop-accent); margin: 4px 0 10px; }
 .shop-reviews {
