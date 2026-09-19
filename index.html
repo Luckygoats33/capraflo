@@ -3,1264 +3,216 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Capra Suite — CapraFlo, CapraCred &amp; CapraBoost for Shopify</title>
-<meta name="description" content="Capra Suite for Shopify: CapraFlo growth OS, CapraCred reviews, CapraBoost thank-you upsells. Private preview from Support Wellness Global. Not live on the Shopify App Store.">
-<meta property="og:title" content="Capra Suite — Shopify growth apps">
-<meta property="og:description" content="Install CapraFlo, preview with CapraFlo AI, agree a Site mode, sync selling plans and discounts — then layer CapraCred and CapraBoost. Private preview.">
+<title>Capra Suite — Shopify growth OS from Support Wellness Global</title>
+<meta name="description" content="CapraFlo, CapraCred, and CapraBoost: one Capra Suite install for bundles, Subscribe & Save, loyalty, affiliates, reviews, and thank-you upsells. Private preview. Not on the Shopify App Store.">
+<meta property="og:title" content="Capra Suite — Shopify growth OS">
+<meta property="og:description" content="Replace the bolted growth stack. Keep native Shopify checkout. Private preview from Support Wellness Global.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="logo.jpeg">
 <link rel="icon" href="logo.jpeg" type="image/jpeg">
 <link rel="apple-touch-icon" href="logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #09090e;
-  --bg-elevated: #0f0f16;
-  --surface: #14141d;
-  --surface-2: #1a1a26;
-  --surface-3: #21212e;
-  --border: rgba(255,255,255,0.075);
-  --border-strong: rgba(255,255,255,0.13);
-  --text: #f2f2f7;
-  --text-secondary: #9b9bb0;
-  --muted: #6a6a80;
-  --indigo: #6366f1;
-  --indigo-bright: #818cf8;
-  --violet: #8b5cf6;
-  --violet-soft: #a78bfa;
-  --indigo-glow: rgba(99,102,241,0.16);
-  --violet-glow: rgba(139,92,246,0.12);
-  --mint: #34d399;
-  --mint-bg: rgba(52,211,153,0.12);
-  --mint-border: rgba(52,211,153,0.28);
-  --amber: #fbbf24;
-  --amber-soft: rgba(251,191,36,0.14);
-  --rose: #fb7185;
-  --serif: "Instrument Serif", "Fraunces", Georgia, serif;
-  --display: "Fraunces", "Instrument Serif", Georgia, serif;
-  --sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-  --radius: 16px;
-  --radius-sm: 10px;
-  --max: 1140px;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-a { color: var(--indigo-bright); text-decoration: none; transition: color 0.2s var(--ease); }
-a:hover { color: var(--violet-soft); }
-img { max-width: 100%; display: block; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; }
-ul, ol { list-style: none; }
-.container { width: min(100% - 40px, var(--max)); margin-inline: auto; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--indigo-bright);
-  margin-bottom: 16px;
-}
-.eyebrow::before {
-  content: ""; width: 20px; height: 1px;
-  background: linear-gradient(90deg, var(--indigo), var(--violet));
-}
-h1, h2, h3, .display {
-  font-family: var(--display); font-weight: 600;
-  letter-spacing: -0.035em; line-height: 1.1; color: #fff;
-}
-.serif-italic { font-family: var(--serif); font-style: italic; font-weight: 400; }
-.muted { color: var(--text-secondary); }
-.lead { font-size: 1.125rem; color: var(--text-secondary); max-width: 560px; line-height: 1.7; }
-.grad {
-  background: linear-gradient(135deg, #c4b5fd 0%, #818cf8 45%, #a5b4fc 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.section { padding: 96px 0; position: relative; }
-.section-tight { padding: 72px 0; }
-.section-head { max-width: 640px; margin-bottom: 48px; }
-.section-head h2 { font-size: clamp(1.85rem, 3.4vw, 2.65rem); margin-bottom: 14px; }
-.section-head .sub { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; }
-
-.preview-banner {
-  position: relative; z-index: 200;
-  background: linear-gradient(90deg, #16121f 0%, #12162a 50%, #16121f 100%);
-  border-bottom: 1px solid var(--border);
-  padding: 11px 20px;
-  text-align: center;
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.01em;
-}
-.preview-banner strong { color: var(--amber); font-weight: 700; }
-.preview-banner a { color: var(--indigo-bright); font-weight: 600; }
-.preview-banner .dot {
-  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--amber); margin-right: 8px; vertical-align: middle;
-  box-shadow: 0 0 0 3px var(--amber-soft);
-}
-
-.nav {
-  position: sticky; top: 0; z-index: 100;
-  backdrop-filter: blur(22px) saturate(1.5);
-  -webkit-backdrop-filter: blur(22px) saturate(1.5);
-  background: rgba(9,9,14,0.72);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s, background 0.3s;
-}
-.nav.is-scrolled { border-bottom-color: var(--border); background: rgba(9,9,14,0.92); }
-.nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 14px 0; width: min(100% - 40px, var(--max)); margin-inline: auto;
-}
-.brand {
-  display: flex; align-items: center; gap: 11px;
-  color: #fff; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.03em;
-}
-.brand img {
-  width: 34px; height: 34px; border-radius: 9px; object-fit: cover;
-  box-shadow: 0 0 0 1px var(--border-strong), 0 4px 14px rgba(0,0,0,0.45);
-}
-.brand span em { font-style: normal; color: var(--indigo-bright); }
-.nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links a { color: var(--muted); font-size: 0.875rem; font-weight: 500; }
-.nav-links a:hover { color: #fff; }
-
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 12px 22px; border-radius: 999px; font-weight: 650; font-size: 0.9rem;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-.btn:hover { transform: translateY(-1px); }
-.btn-primary {
-  background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
-  color: #fff !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.14) inset, 0 8px 28px rgba(99,102,241,0.3);
-}
-.btn-primary:hover {
-  box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 14px 36px rgba(99,102,241,0.42);
-  color: #fff !important;
-}
-.btn-ghost {
-  background: var(--surface); color: var(--text) !important;
-  border: 1px solid var(--border-strong);
-}
-.btn-ghost:hover { border-color: rgba(129,140,248,0.5); color: #fff !important; background: var(--surface-2); }
-.btn-sm { padding: 8px 16px; font-size: 0.8125rem; }
-.btn-lg { padding: 14px 26px; font-size: 0.95rem; }
-@media (max-width: 900px) {
-  .nav-links a:not(.btn) { display: none; }
-}
-
-.tag {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 4px 9px; border-radius: 999px;
-  border: 1px solid var(--border-strong); color: var(--text-secondary);
-  background: rgba(255,255,255,0.03);
-}
-.tag-lock {
-  color: var(--mint); border-color: var(--mint-border); background: var(--mint-bg);
-}
-.tag-prop {
-  color: var(--amber); border-color: rgba(251,191,36,0.3); background: var(--amber-soft);
-}
-.tag-suite {
-  color: var(--indigo-bright); border-color: rgba(129,140,248,0.3); background: rgba(99,102,241,0.1);
-}
-
-.hero {
-  position: relative; padding: 80px 0 56px; overflow: hidden;
-}
-.hero-glow-a {
-  position: absolute; inset: -15% 25% auto -5%;
-  height: 560px; width: 560px; border-radius: 50%;
-  background: radial-gradient(circle, var(--indigo-glow), transparent 68%);
-  pointer-events: none; filter: blur(8px);
-}
-.hero-glow-b {
-  position: absolute; top: 5%; right: -10%;
-  height: 480px; width: 480px; border-radius: 50%;
-  background: radial-gradient(circle, var(--violet-glow), transparent 70%);
-  pointer-events: none; filter: blur(10px);
-}
-.hero-grid {
-  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
-}
-.hero h1 {
-  font-size: clamp(2.35rem, 4.8vw, 3.55rem);
-  margin-bottom: 20px; max-width: 14ch;
-}
-.hero .lead { margin-bottom: 28px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-.hero-meta {
-  display: flex; flex-wrap: wrap; gap: 10px 18px;
-  font-size: 0.8rem; color: var(--muted);
-}
-.hero-meta strong { color: var(--text-secondary); font-weight: 600; }
-.hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
-.hero-meta span::before {
-  content: ""; width: 3px; height: 3px; border-radius: 50%; background: var(--muted);
-}
-.hero-meta span:first-child::before { display: none; }
-
-.hero-mock {
-  position: relative;
-  background: linear-gradient(165deg, var(--surface-2) 0%, var(--surface) 100%);
-  border: 1px solid var(--border-strong);
-  border-radius: 18px;
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,0.04) inset,
-    0 40px 80px -20px rgba(0,0,0,0.65),
-    0 0 60px -20px rgba(99,102,241,0.2);
-  overflow: hidden;
-}
-.hero-mock::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-}
-.mock-chrome {
-  display: flex; align-items: center; gap: 8px;
-  padding: 12px 14px; border-bottom: 1px solid var(--border);
-  background: rgba(0,0,0,0.25);
-}
-.mock-dots { display: flex; gap: 5px; }
-.mock-dots i {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(255,255,255,0.12); display: block;
-}
-.mock-dots i:nth-child(1) { background: #ff5f57; opacity: 0.7; }
-.mock-dots i:nth-child(2) { background: #febc2e; opacity: 0.7; }
-.mock-dots i:nth-child(3) { background: #28c840; opacity: 0.7; }
-.mock-url {
-  flex: 1; text-align: center; font-size: 0.68rem; color: var(--muted);
-  font-weight: 500; letter-spacing: 0.02em;
-  background: rgba(255,255,255,0.04); border-radius: 6px; padding: 4px 10px;
-  border: 1px solid var(--border);
-}
-.mock-body { display: grid; grid-template-columns: 148px 1fr; min-height: 340px; }
-.mock-side {
-  border-right: 1px solid var(--border); padding: 14px 10px;
-  background: rgba(0,0,0,0.2);
-}
-.mock-side .nav-item {
-  display: flex; align-items: center; gap: 8px;
-  padding: 7px 9px; border-radius: 7px; font-size: 0.7rem;
-  color: var(--muted); font-weight: 500; margin-bottom: 2px;
-}
-.mock-side .nav-item.active {
-  background: rgba(99,102,241,0.15); color: var(--indigo-bright);
-  border: 1px solid rgba(99,102,241,0.25);
-}
-.mock-side .nav-item .ico {
-  width: 14px; height: 14px; border-radius: 3px;
-  background: rgba(255,255,255,0.08); flex-shrink: 0;
-}
-.mock-side .nav-item.active .ico {
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-}
-.mock-side .side-label {
-  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); padding: 10px 9px 4px;
-}
-.mock-main { padding: 16px 18px; }
-.mock-main .mock-title {
-  font-family: var(--display); font-size: 1.05rem; font-weight: 600;
-  letter-spacing: -0.03em; margin-bottom: 4px;
-}
-.mock-sub { font-size: 0.72rem; color: var(--muted); margin-bottom: 14px; }
-.mode-cards { display: grid; gap: 7px; }
-.mode-card {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 11px; border-radius: 9px;
-  border: 1px solid var(--border); background: rgba(255,255,255,0.02);
-  font-size: 0.72rem;
-}
-.mode-card.selected {
-  border-color: rgba(129,140,248,0.45);
-  background: rgba(99,102,241,0.1);
-  box-shadow: 0 0 0 1px rgba(99,102,241,0.15);
-}
-.mode-card b { font-weight: 650; color: #fff; display: block; margin-bottom: 1px; }
-.mode-card span { color: var(--muted); font-size: 0.65rem; }
-.mode-card .pill {
-  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase; padding: 3px 7px; border-radius: 999px;
-  background: rgba(99,102,241,0.2); color: var(--indigo-bright);
-  border: 1px solid rgba(129,140,248,0.3);
-}
-.mock-ai {
-  margin-top: 12px; padding: 10px 12px; border-radius: 9px;
-  background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
-  border: 1px solid rgba(129,140,248,0.25);
-  font-size: 0.68rem; color: var(--text-secondary); line-height: 1.5;
-}
-.mock-ai strong { color: var(--indigo-bright); }
-.mock-agree {
-  margin-top: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px;
-}
-.mock-agree .agree-btn {
-  padding: 7px 14px; border-radius: 8px; font-size: 0.7rem; font-weight: 700;
-  background: linear-gradient(135deg, var(--indigo), var(--violet)); color: #fff;
-  box-shadow: 0 4px 12px rgba(99,102,241,0.35);
-}
-.mock-agree .hint { font-size: 0.62rem; color: var(--muted); }
-
-@media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero h1 { max-width: none; }
-  .mock-body { grid-template-columns: 1fr; }
-  .mock-side { display: none; }
-}
-
-.how {
-  border-top: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.07), transparent),
-    var(--bg);
-}
-.flow { display: flex; flex-direction: column; gap: 0; position: relative; }
-.flow::before {
-  content: ""; position: absolute; left: 27px; top: 40px; bottom: 40px; width: 1px;
-  background: linear-gradient(180deg, var(--indigo), var(--violet), transparent);
-  opacity: 0.45;
-}
-.flow-step {
-  display: grid; grid-template-columns: 56px 1fr 280px; gap: 28px;
-  padding: 28px 0; align-items: start;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-.flow-step:last-child { border-bottom: none; }
-.flow-num {
-  width: 56px; height: 56px; border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--display); font-size: 1.25rem; font-weight: 600;
-  background: var(--surface-2); border: 1px solid var(--border-strong);
-  color: var(--indigo-bright); position: relative; z-index: 1;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-}
-.flow-step:nth-child(even) .flow-num {
-  background: linear-gradient(145deg, rgba(99,102,241,0.2), rgba(139,92,246,0.12));
-  border-color: rgba(129,140,248,0.3);
-}
-.flow-copy h3 { font-size: 1.3rem; margin-bottom: 8px; letter-spacing: -0.025em; }
-.flow-copy p {
-  color: var(--text-secondary); font-size: 0.95rem; max-width: 520px; margin-bottom: 12px;
-}
-.flow-copy .tag { margin-right: 6px; }
-.flow-visual {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; padding: 14px; min-height: 110px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-}
-.fv-row {
-  display: flex; align-items: center; gap: 10px;
-  padding: 8px 10px; border-radius: 8px; margin-bottom: 6px;
-  background: rgba(255,255,255,0.02); border: 1px solid var(--border);
-  font-size: 0.72rem;
-}
-.fv-row:last-child { margin-bottom: 0; }
-.fv-row b { color: #fff; font-weight: 650; display: block; }
-.fv-row span { color: var(--muted); font-size: 0.65rem; }
-.fv-ico {
-  width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
-  background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.2));
-  border: 1px solid rgba(129,140,248,0.25);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.7rem;
-}
-.fv-check {
-  display: flex; align-items: center; gap: 8px; padding: 10px;
-  border-radius: 8px; background: rgba(99,102,241,0.1);
-  border: 1px dashed rgba(129,140,248,0.35); font-size: 0.75rem; color: var(--indigo-bright);
-  font-weight: 600;
-}
-.fv-boost-card {
-  padding: 12px; border-radius: 10px; border: 1px dashed rgba(129,140,248,0.4);
-  background: rgba(99,102,241,0.08); text-align: center;
-}
-.fv-boost-card b { display: block; color: #fff; font-size: 0.8rem; margin-bottom: 4px; }
-.fv-boost-card span { font-size: 0.68rem; color: var(--muted); }
-.stars { color: var(--amber); letter-spacing: 1px; font-size: 0.75rem; }
-
-@media (max-width: 860px) {
-  .flow::before { left: 21px; }
-  .flow-step { grid-template-columns: 44px 1fr; gap: 16px; }
-  .flow-num { width: 44px; height: 44px; font-size: 1.05rem; border-radius: 11px; }
-  .flow-visual { grid-column: 2; }
-}
-
-.products { border-top: 1px solid var(--border); }
-.prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.prod-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px 22px;
-  transition: border-color 0.25s, transform 0.25s var(--ease), box-shadow 0.25s;
-  position: relative; overflow: hidden;
-}
-.prod-card::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  opacity: 0; transition: opacity 0.25s;
-}
-.prod-card:hover {
-  border-color: rgba(129,140,248,0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px -20px rgba(99,102,241,0.25);
-}
-.prod-card:hover::before { opacity: 1; }
-.prod-card.span-2 { grid-column: span 2; }
-.prod-card .tag { margin-bottom: 14px; }
-.prod-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.prod-card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.6; }
-.prod-card ul { display: flex; flex-direction: column; gap: 6px; }
-.prod-card li {
-  font-size: 0.8rem; color: var(--muted);
-  padding-left: 14px; position: relative;
-}
-.prod-card li::before {
-  content: ""; position: absolute; left: 0; top: 8px;
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--indigo); opacity: 0.7;
-}
-.prod-card.featured {
-  background: linear-gradient(160deg, rgba(99,102,241,0.1) 0%, var(--surface) 50%);
-  border-color: rgba(129,140,248,0.25);
-}
-.mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
-.mini-chip {
-  padding: 10px 12px; border-radius: 9px;
-  background: rgba(0,0,0,0.25); border: 1px solid var(--border);
-  font-size: 0.75rem;
-}
-.mini-chip b { display: block; color: #fff; font-weight: 650; margin-bottom: 2px; font-size: 0.8rem; }
-.mini-chip span { color: var(--muted); font-size: 0.68rem; }
-
-@media (max-width: 1000px) {
-  .prod-grid { grid-template-columns: 1fr 1fr; }
-  .prod-card.span-2 { grid-column: span 2; }
-}
-@media (max-width: 640px) {
-  .prod-grid { grid-template-columns: 1fr; }
-  .prod-card.span-2 { grid-column: span 1; }
-}
-
-.showcase {
-  border-top: 1px solid var(--border);
-  background: radial-gradient(ellipse 70% 40% at 80% 20%, rgba(139,92,246,0.06), transparent), var(--bg);
-}
-.showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.suite-mock {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px -16px rgba(0,0,0,0.5);
-}
-.suite-mock-head {
-  display: flex; align-items: center; gap: 8px;
-  padding: 11px 14px; border-bottom: 1px solid var(--border);
-  font-size: 0.72rem; font-weight: 600; color: var(--text-secondary);
-  background: rgba(0,0,0,0.2);
-}
-.suite-mock-head i {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--indigo-bright); display: block;
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
-}
-.suite-mock-body { padding: 16px; min-height: 200px; }
-.admin-modes .am-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 11px; border-radius: 8px; margin-bottom: 6px;
-  border: 1px solid var(--border); font-size: 0.72rem; background: rgba(255,255,255,0.02);
-}
-.admin-modes .am-row.on {
-  border-color: rgba(129,140,248,0.4); background: rgba(99,102,241,0.1);
-}
-.admin-modes .am-row b { color: #fff; }
-.admin-modes .toggle {
-  width: 28px; height: 16px; border-radius: 999px;
-  background: rgba(255,255,255,0.1); position: relative;
-}
-.admin-modes .am-row.on .toggle {
-  background: linear-gradient(90deg, var(--indigo), var(--violet));
-}
-.admin-modes .toggle::after {
-  content: ""; position: absolute; top: 2px; left: 2px;
-  width: 12px; height: 12px; border-radius: 50%; background: #fff;
-}
-.admin-modes .am-row.on .toggle::after { left: 14px; }
-.admin-modes .sync-bar {
-  margin-top: 10px; padding: 8px 10px; border-radius: 8px;
-  background: var(--mint-bg); border: 1px solid var(--mint-border);
-  font-size: 0.68rem; color: var(--mint); font-weight: 600;
-}
-.pdp-mock .pdp-img {
-  height: 72px; border-radius: 8px; margin-bottom: 10px;
-  background: linear-gradient(135deg, #2a2a3d 0%, #1e1e2c 100%);
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--muted); font-size: 0.65rem;
-}
-.pdp-mock .pdp-name { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
-.pdp-mock .pdp-price { font-size: 0.8rem; color: var(--indigo-bright); font-weight: 650; margin-bottom: 8px; }
-.pdp-mock .cred-box {
-  padding: 10px; border-radius: 8px;
-  border: 1px solid rgba(251,191,36,0.25); background: rgba(251,191,36,0.06);
-  margin-bottom: 8px;
-}
-.pdp-mock .cred-box .stars { margin-bottom: 4px; }
-.pdp-mock .cred-box p { font-size: 0.68rem; color: var(--text-secondary); font-style: italic; }
-.pdp-mock .plan-opts { display: flex; gap: 6px; margin-bottom: 8px; }
-.pdp-mock .plan-opt {
-  flex: 1; padding: 7px; border-radius: 7px; text-align: center;
-  border: 1px solid var(--border); font-size: 0.62rem; color: var(--muted);
-}
-.pdp-mock .plan-opt.on {
-  border-color: rgba(129,140,248,0.45); background: rgba(99,102,241,0.12); color: #fff;
-}
-.pdp-mock .atc {
-  width: 100%; padding: 8px; border-radius: 8px; text-align: center;
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  color: #fff; font-size: 0.72rem; font-weight: 700;
-}
-.ty-mock .ty-check {
-  width: 36px; height: 36px; border-radius: 50%; margin: 0 auto 10px;
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 1rem; font-weight: 700;
-}
-.ty-mock .ty-title { text-align: center; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
-.ty-mock .ty-sub { text-align: center; font-size: 0.68rem; color: var(--muted); margin-bottom: 14px; }
-.ty-mock .boost-offer {
-  padding: 14px; border-radius: 10px;
-  border: 1px solid rgba(129,140,248,0.35);
-  background: linear-gradient(160deg, rgba(99,102,241,0.14), rgba(139,92,246,0.06));
-  text-align: center;
-}
-.ty-mock .boost-offer .bo-label {
-  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--indigo-bright); margin-bottom: 6px;
-}
-.ty-mock .boost-offer b { display: block; color: #fff; font-size: 0.85rem; margin-bottom: 4px; }
-.ty-mock .boost-offer p { font-size: 0.68rem; color: var(--text-secondary); margin-bottom: 10px; }
-.ty-mock .boost-offer .bo-btn {
-  display: inline-block; padding: 7px 16px; border-radius: 7px;
-  background: #fff; color: #0a0a0f; font-size: 0.7rem; font-weight: 700;
-}
-.ty-mock .skip { text-align: center; margin-top: 8px; font-size: 0.62rem; color: var(--muted); }
-
-@media (max-width: 860px) {
-  .showcase-grid { grid-template-columns: 1fr; }
-}
-
-.pricing { border-top: 1px solid var(--border);
-  background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.06), transparent), var(--bg);
-}
-.divider-label {
-  text-align: center; font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
-  margin: 0 0 20px; position: relative;
-}
-.divider-label::before, .divider-label::after {
-  content: ""; position: absolute; top: 50%; width: calc(50% - 90px); height: 1px;
-  background: var(--border);
-}
-.divider-label::before { left: 0; }
-.divider-label::after { right: 0; }
-.pricing-wrap {
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 40px;
-}
-.price-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 22px 18px;
-  display: flex; flex-direction: column;
-  transition: border-color 0.2s, transform 0.2s var(--ease);
-}
-.price-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-.price-card.popular {
-  border-color: rgba(129,140,248,0.4);
-  background: linear-gradient(180deg, rgba(99,102,241,0.12) 0%, var(--surface) 40%);
-  box-shadow: 0 0 0 1px rgba(99,102,241,0.1), 0 20px 40px -20px rgba(99,102,241,0.3);
-  position: relative;
-}
-.price-card.popular .pop-badge {
-  position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
-  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 3px 10px; border-radius: 999px;
-  background: linear-gradient(135deg, var(--indigo), var(--violet)); color: #fff;
-  white-space: nowrap;
-}
-.price-card .tier { font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
-.price-card .amount {
-  font-family: var(--display); font-size: 2rem; font-weight: 600;
-  letter-spacing: -0.04em; color: #fff; line-height: 1;
-}
-.price-card .amount .cur { font-size: 1.1rem; vertical-align: top; margin-right: 1px; }
-.price-card .period { font-size: 0.72rem; color: var(--muted); margin: 6px 0 16px; }
-.price-card ul { flex: 1; display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
-.price-card li {
-  font-size: 0.75rem; color: var(--text-secondary);
-  padding-left: 16px; position: relative;
-}
-.price-card li::before {
-  content: "✓"; position: absolute; left: 0; color: var(--indigo-bright);
-  font-weight: 700; font-size: 0.7rem;
-}
-.price-card .cta {
-  display: block; text-align: center; padding: 9px; border-radius: 9px;
-  font-size: 0.78rem; font-weight: 650;
-  border: 1px solid var(--border-strong); color: var(--text) !important;
-  background: rgba(255,255,255,0.03); transition: background 0.2s, border-color 0.2s;
-}
-.price-card .cta:hover { background: rgba(99,102,241,0.15); border-color: rgba(129,140,248,0.4); color: #fff !important; }
-.price-card.popular .cta {
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  border: none; color: #fff !important;
-  box-shadow: 0 4px 16px rgba(99,102,241,0.3);
-}
-.price-card.popular .cta:hover { box-shadow: 0 6px 20px rgba(99,102,241,0.4); }
-
-.proposed-note {
-  text-align: center; padding: 18px 24px; border-radius: 12px;
-  background: var(--surface); border: 1px solid var(--border);
-  font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px;
-  max-width: 720px; margin-left: auto; margin-right: auto;
-}
-
-.stack-compare {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; margin: 0 auto;
-}
-.stack-box {
-  border-radius: 14px; padding: 24px; border: 1px solid var(--border);
-  background: var(--surface);
-}
-.stack-box.winner {
-  border-color: rgba(129,140,248,0.4);
-  background: linear-gradient(160deg, rgba(99,102,241,0.1), var(--surface));
-}
-.stack-box .stack-label {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
-}
-.stack-box .stack-sub { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 16px; }
-.stack-box .stack-total {
-  font-family: var(--display); font-size: 2.4rem; font-weight: 600;
-  letter-spacing: -0.04em; margin-bottom: 16px;
-}
-.stack-box.winner .stack-total { color: var(--indigo-bright); }
-.stack-box.loser .stack-total { color: var(--rose); opacity: 0.85; }
-.stack-box ul { display: flex; flex-direction: column; gap: 8px; }
-.stack-box li {
-  display: flex; justify-content: space-between; font-size: 0.8rem;
-  color: var(--text-secondary); padding-bottom: 8px; border-bottom: 1px solid var(--border);
-}
-.stack-box li:last-child { border-bottom: none; padding-bottom: 0; }
-.stack-box li span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; }
-
-@media (max-width: 1100px) {
-  .pricing-wrap { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 700px) {
-  .pricing-wrap { grid-template-columns: 1fr 1fr; }
-  .stack-compare { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .pricing-wrap { grid-template-columns: 1fr; }
-}
-
-.surfaces { border-top: 1px solid var(--border); }
-.surf-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
-.surf-card {
-  padding: 20px 16px; border-radius: 12px;
-  background: var(--surface); border: 1px solid var(--border);
-  text-align: center; transition: border-color 0.2s, transform 0.2s;
-}
-.surf-card:hover { border-color: rgba(129,140,248,0.3); transform: translateY(-2px); }
-.surf-icon {
-  width: 40px; height: 40px; margin: 0 auto 12px; border-radius: 10px;
-  background: linear-gradient(145deg, rgba(99,102,241,0.2), rgba(139,92,246,0.12));
-  border: 1px solid rgba(129,140,248,0.25);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
-}
-.surf-card h3 { font-size: 0.9rem; margin-bottom: 6px; font-family: var(--sans); font-weight: 700; letter-spacing: -0.02em; }
-.surf-card p { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
-.surf-card code {
-  display: inline-block; margin-top: 8px; font-size: 0.65rem;
-  padding: 2px 6px; border-radius: 4px;
-  background: rgba(0,0,0,0.35); border: 1px solid var(--border);
-  color: var(--indigo-bright); font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-@media (max-width: 900px) {
-  .surf-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 560px) {
-  .surf-grid { grid-template-columns: 1fr 1fr; }
-}
-
-.agency {
-  border-top: 1px solid var(--border);
-  background: radial-gradient(ellipse 50% 60% at 20% 50%, rgba(99,102,241,0.06), transparent), var(--bg);
-}
-.agency-inner {
-  display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center;
-}
-.agency-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 16px; padding: 28px; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.5);
-}
-.agency-card .ac-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem;
-}
-.agency-card .ac-row:last-child { border-bottom: none; }
-.agency-card .ac-row span:first-child { color: var(--muted); }
-.agency-card .ac-row span:last-child { color: #fff; font-weight: 600; }
-.agency-card .ac-row a { font-weight: 600; }
-
-@media (max-width: 800px) {
-  .agency-inner { grid-template-columns: 1fr; gap: 32px; }
-}
-
-.cta-band {
-  border-top: 1px solid var(--border);
-  padding: 88px 0;
-  text-align: center;
-  background:
-    radial-gradient(ellipse 50% 80% at 50% 100%, rgba(99,102,241,0.12), transparent),
-    var(--bg);
-}
-.cta-band h2 {
-  font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 14px;
-  max-width: 18ch; margin-left: auto; margin-right: auto;
-}
-.cta-band p {
-  color: var(--text-secondary); max-width: 480px; margin: 0 auto 28px; font-size: 1.05rem;
-}
-.cta-band .cta-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
-
-.footer {
-  border-top: 1px solid var(--border);
-  padding: 48px 0 32px;
-  background: var(--bg-elevated);
-}
-.footer-top {
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; margin-bottom: 40px;
-}
-.footer-brand {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 800; font-size: 1rem; color: #fff; margin-bottom: 12px;
-}
-.footer-brand img {
-  width: 28px; height: 28px; border-radius: 7px; object-fit: cover;
-}
-.footer-copy { font-size: 0.8rem; color: var(--muted); max-width: 320px; line-height: 1.6; }
-.footer h4 {
-  font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
-}
-.footer-links { display: flex; flex-direction: column; gap: 8px; }
-.footer-links a { color: var(--text-secondary); font-size: 0.85rem; }
-.footer-links a:hover { color: #fff; }
-.footer-bottom {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
-  padding-top: 24px; border-top: 1px solid var(--border);
-  font-size: 0.75rem; color: var(--muted);
-}
-
-@media (max-width: 700px) {
-  .footer-top { grid-template-columns: 1fr; gap: 28px; }
-  .section { padding: 64px 0; }
-  .hero { padding: 56px 0 40px; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="preview-banner" role="status">
-  <span class="dot" aria-hidden="true"></span>
+  <span class="live-dot" aria-hidden="true"></span>
   <strong>Private preview</strong> — Capra Suite is not live on the Shopify App Store.
-  Invite-only access via <a href="mailto:will.wiedenmann@gmail.com">Support Wellness Global</a>.
+  Invite-only via <a href="mailto:will.wiedenmann@gmail.com">Support Wellness Global</a>.
 </div>
-
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="#">
-      <img src="logo.jpeg" width="34" height="34" alt="Capra Suite logo">
-      <span>Capra<em>Flo</em></span>
+    <a class="brand" href="index.html">
+      <img src="logo.jpeg" width="34" height="34" alt="">
+      <span>Capra<span class="brand-em">Suite</span></span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#how">How it works</a>
-      <a href="#products">Products</a>
-      <a href="#showcase">Showcase</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#surfaces">Surfaces</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-menu" aria-label="Primary">
+      <a href="products.html">Products</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="showcase.html">Showcase</a>
+      <a href="case-studies.html">Case studies</a>
+      <a href="pricing.html">Pricing</a>
       <a class="btn btn-primary btn-sm" href="mailto:will.wiedenmann@gmail.com">Request access</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-glow-a" aria-hidden="true"></div>
-  <div class="hero-glow-b" aria-hidden="true"></div>
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Capra Suite · Shopify growth OS</div>
-      <h1>Sell more after checkout starts <span class="grad">working for you</span></h1>
-      <p class="lead">CapraFlo installs into Admin, CapraFlo AI previews the right Site mode, you agree — selling plans and automatic discounts sync. CapraCred earns trust on the PDP; CapraBoost lifts AOV on thank-you.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#how">See how it works</a>
-        <a class="btn btn-ghost btn-lg" href="#pricing">View pricing</a>
+<main id="main">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Capra Suite · Private preview</div>
+        <h1>Replace the growth stack. <span class="serif-italic">Keep the checkout.</span></h1>
+        <p class="lead">CapraFlo installs into Shopify Admin. CapraFlo AI previews a Site mode. You agree — selling plans and automatic discounts sync. CapraCred and CapraBoost finish the path after the PDP and after checkout.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="products.html">See the products</a>
+          <a class="btn btn-ghost btn-lg" href="pricing.html">View pricing</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>CapraFlo</strong> Locked</span>
+          <span><strong>CapraCred</strong> + <strong>CapraBoost</strong> Proposed</span>
+          <span>By <strong>Support Wellness Global</strong></span>
+        </div>
       </div>
-      <div class="hero-meta">
-        <span><strong>CapraFlo</strong> Locked</span>
-        <span><strong>CapraCred</strong> + <strong>CapraBoost</strong> Proposed</span>
-        <span>By <strong>Support Wellness Global</strong></span>
-      </div>
-    </div>
-    <div class="hero-mock" aria-hidden="true">
-      <div class="mock-chrome">
-        <div class="mock-dots"><i></i><i></i><i></i></div>
-        <div class="mock-url">admin.shopify.com · CapraFlo · Site modes</div>
-      </div>
-      <div class="mock-body">
-        <aside class="mock-side">
-          <div class="side-label">CapraFlo</div>
-          <div class="nav-item"><span class="ico"></span> Dashboard</div>
-          <div class="nav-item"><span class="ico"></span> Bundles</div>
-          <div class="nav-item"><span class="ico"></span> Subscribe</div>
-          <div class="nav-item"><span class="ico"></span> Loyalty</div>
-          <div class="nav-item"><span class="ico"></span> Affiliate</div>
-          <div class="nav-item active"><span class="ico"></span> Site modes</div>
-          <div class="nav-item"><span class="ico"></span> Settings</div>
-        </aside>
-        <div class="mock-main">
-          <div class="mock-title">Site modes</div>
-          <div class="mock-sub">CapraFlo AI recommends DTC Growth for your catalog</div>
-          <div class="mode-cards">
-            <div class="mode-card selected">
-              <div><b>DTC Growth</b><span>Selling plans + volume discounts</span></div>
-              <span class="pill">Recommended</span>
-            </div>
-            <div class="mode-card">
-              <div><b>Subscribe-Led</b><span>Recurring first, one-time second</span></div>
-            </div>
-            <div class="mode-card">
-              <div><b>Loyalty-Led</b><span>Points &amp; VIP after paid</span></div>
-            </div>
-            <div class="mode-card">
-              <div><b>Creator / Affiliate</b><span>Referral capture + partners</span></div>
+      <div>
+        <div class="frame" aria-hidden="true">
+          <div class="frame-chrome">
+            <div class="frame-dots"><i></i><i></i><i></i></div>
+            <div class="frame-url">admin.shopify.com · Apps · CapraFlo · Site modes</div>
+          </div>
+          <div class="admin">
+            <aside class="admin-rail">
+              <div class="side-label">CapraFlo</div>
+              <div class="nav-item"><span class="ico"></span> Dashboard</div>
+              <div class="nav-item"><span class="ico"></span> Bundles</div>
+              <div class="nav-item"><span class="ico"></span> Subscribe</div>
+              <div class="nav-item"><span class="ico"></span> Loyalty</div>
+              <div class="nav-item"><span class="ico"></span> Affiliate</div>
+              <div class="nav-item active"><span class="ico"></span> Site modes</div>
+              <div class="nav-item"><span class="ico"></span> Settings</div>
+            </aside>
+            <div class="admin-main">
+              <div class="admin-kicker">Capra Admin hub</div>
+              <div class="admin-title">Site modes</div>
+              <div class="admin-sub">CapraFlo AI recommends DTC Growth for this catalog</div>
+              <div class="mode-list">
+                <div class="mode-row on">
+                  <div><b>DTC Growth</b><span>Selling plans + volume discounts</span></div>
+                  <span class="pill">Recommended</span>
+                </div>
+                <div class="mode-row">
+                  <div><b>Subscribe-Led</b><span>Recurring first, one-time second</span></div>
+                </div>
+                <div class="mode-row">
+                  <div><b>Loyalty-Led</b><span>Points &amp; VIP after paid</span></div>
+                </div>
+                <div class="mode-row">
+                  <div><b>Creator / Affiliate</b><span>Referral capture + partners</span></div>
+                </div>
+              </div>
+              <div class="ai-note"><strong>CapraFlo AI</strong> · Preview staged. Selling plans and automatic discounts do not write until you agree.</div>
+              <div class="agree-row">
+                <span class="hint">Local records from template</span>
+                <span class="agree-btn">Yes, I agree</span>
+              </div>
             </div>
           </div>
-          <div class="mock-ai"><strong>CapraFlo AI</strong> · Preview ready — selling plans + automatic discounts staged for sync. Nothing writes until you agree.</div>
-          <div class="mock-agree">
-            <span class="hint">Local records from template</span>
-            <span class="agree-btn">Yes, I agree</span>
-          </div>
+        </div>
+        <div class="preview-cap">
+          <span>Embedded Admin · Site modes</span>
+          <span class="tag">Product UI preview</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section how" id="how">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Primary path</div>
-      <h2>How Capra Suite works</h2>
-      <p class="sub">One money path from install to thank-you. CapraFlo locks the growth OS; CapraCred and CapraBoost complete the journey as proposed companions.</p>
+  <section class="trust on-bone">
+    <div class="container trust-row">
+      <div class="trust-item">
+        <b>Private preview</b>
+        <span>Invite-only. Not listed on the Shopify App Store.</span>
+      </div>
+      <div class="trust-item">
+        <b>Native checkout</b>
+        <span>Selling plans and discounts — no parallel cart.</span>
+      </div>
+      <div class="trust-item">
+        <b>One Partner app</b>
+        <span>Bundles, Subscribe, Loyalty, Affiliate in CapraFlo.</span>
+      </div>
+      <div class="trust-item">
+        <b>Support Wellness Global</b>
+        <span>Studio behind Capra Suite. Walk the money path with us.</span>
+      </div>
     </div>
-    <div class="flow">
-      <article class="flow-step">
-        <div class="flow-num">1</div>
-        <div class="flow-copy">
+  </section>
+
+  <section class="section on-bone">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Primary path</div>
+        <h2>Install. Preview. Agree. Sync.</h2>
+        <p class="sub">Home stays short. The money path is four locked CapraFlo steps — then proposed companions on the PDP and thank-you.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">01</div>
           <h3>Install CapraFlo</h3>
-          <p>Install CapraFlo as an embedded Shopify Admin app. Dashboard, Bundles, Subscriptions, Loyalty, Affiliate, and Settings appear in the left nav — ready for the money path.</p>
+          <p>Embedded Admin app. Dashboard, Bundles, Subscribe, Loyalty, Affiliate, Site modes.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">02</div>
+          <h3>AI preview</h3>
+          <p>CapraFlo AI stages a Site mode plus selling plans and discount tiers. Nothing writes yet.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">03</div>
+          <h3>Yes, I agree</h3>
+          <p>Confirm the mode. Local bundle, subscribe, loyalty, and affiliate records come from the template.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">04</div>
+          <h3>Shopify sync</h3>
+          <p>Selling plan groups and automatic discounts sync through Admin GraphQL. Theme blocks read the mode.</p>
+        </article>
+      </div>
+      <p style="margin-top:28px"><a class="btn btn-ghost" href="how-it-works.html">Full walkthrough</a></p>
+    </div>
+  </section>
+
+  <section class="section hairline">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">The suite</div>
+        <h2>Three products. One money path.</h2>
+        <p class="sub">CapraFlo is locked. CapraCred and CapraBoost are proposed companions — designed to sit beside the OS, not fight the theme.</p>
+      </div>
+      <div class="prod-home">
+        <a class="prod-tile featured" href="products.html#capraflo">
           <span class="tag tag-lock">CapraFlo · Locked</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-row"><div class="fv-ico">◈</div><div><b>Shopify Admin</b><span>Apps → CapraFlo installed</span></div></div>
-          <div class="fv-row"><div class="fv-ico">▦</div><div><b>Embedded nav</b><span>Bundles · Subscribe · Loyalty · Affiliate</span></div></div>
-        </div>
-      </article>
-      <article class="flow-step">
-        <div class="flow-num">2</div>
-        <div class="flow-copy">
-          <h3>CapraFlo AI preview</h3>
-          <p>CapraFlo AI scans your catalog and storefront posture, then stages a concrete preview: which Site mode fits, which selling plans and discount tiers would apply, and what the merchant will see before anything writes to Shopify.</p>
-          <span class="tag tag-lock">CapraFlo AI · Locked</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-row"><div class="fv-ico">✦</div><div><b>Catalog scan</b><span>Products, variants, collections</span></div></div>
-          <div class="fv-row"><div class="fv-ico">◎</div><div><b>Staged preview</b><span>Mode + plans + discounts · no writes yet</span></div></div>
-        </div>
-      </article>
-      <article class="flow-step">
-        <div class="flow-num">3</div>
-        <div class="flow-copy">
-          <h3>Site mode — <em class="serif-italic">Yes, I agree</em></h3>
-          <p>Pick DTC Growth, Mobile Conversion, Subscribe-Led, Loyalty-Led, or Creator / Affiliate-Led. Confirm with <em class="serif-italic">Yes, I agree</em>. CapraFlo creates local Bundle, Subscribe &amp; Save, Loyalty, and Affiliate records from the template.</p>
-          <span class="tag tag-lock">Site modes · Locked</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-check">✓ Yes, I agree — DTC Growth applied</div>
-          <div class="fv-row" style="margin-top:8px"><div class="fv-ico">◇</div><div><b>Local records</b><span>Bundles · S&amp;S · Loyalty · Affiliate</span></div></div>
-        </div>
-      </article>
-      <article class="flow-step">
-        <div class="flow-num">4</div>
-        <div class="flow-copy">
-          <h3>Selling plans + automatic discounts</h3>
-          <p>CapraFlo syncs selling plan groups and automatic basic discounts through Admin GraphQL. Theme embeds and product/cart blocks read the active mode. Checkout stays native Shopify — selling plans and discounts, not a parallel checkout.</p>
-          <span class="tag tag-lock">Sync · Locked</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-row"><div class="fv-ico">⇄</div><div><b>Selling plan groups</b><span>Admin GraphQL sync</span></div></div>
-          <div class="fv-row"><div class="fv-ico">%</div><div><b>Automatic discounts</b><span>Volume &amp; mix tiers live</span></div></div>
-        </div>
-      </article>
-      <article class="flow-step">
-        <div class="flow-num">5</div>
-        <div class="flow-copy">
-          <h3>CapraCred on the PDP</h3>
-          <p>CapraCred puts trusted reviews and social proof on the product page — the moment shoppers decide. Proposed as a focused reviews app in the Capra Suite, designed to sit beside CapraFlo without fighting the theme.</p>
-          <span class="tag tag-prop">CapraCred · Proposed</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-row"><div class="fv-ico">★</div><div><b><span class="stars">★★★★★</span> 4.9</b><span>“Ships fast. Subscribe &amp; Save is painless.”</span></div></div>
-          <div class="fv-row"><div class="fv-ico">▣</div><div><b>Widget + moderation</b><span>PDP-native · theme-friendly</span></div></div>
-        </div>
-      </article>
-      <article class="flow-step">
-        <div class="flow-num">6</div>
-        <div class="flow-copy">
-          <h3>CapraBoost on thank-you</h3>
-          <p>After checkout, CapraBoost surfaces a thank-you upsell — one more offer while the buyer is still warm. Proposed checkout UI / thank-you extension that compounds average order value without interrupting the purchase itself.</p>
-          <span class="tag tag-prop">CapraBoost · Proposed</span>
-        </div>
-        <div class="flow-visual">
-          <div class="fv-boost-card"><b>+ Add-on offer</b><span>CapraBoost upsell on thank-you</span></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section products" id="products">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Key products</div>
-      <h2>Everything Capra puts on CapraFlo.com</h2>
-      <p class="sub">CapraFlo ships four commerce products in one Partner app — plus Site modes and CapraFlo AI. CapraCred and CapraBoost are suite companions. Support Wellness Global wraps the agency layer.</p>
-    </div>
-    <div class="prod-grid">
-      <article class="prod-card span-2 featured">
-        <span class="tag tag-lock">CapraFlo · Locked</span>
-        <h3>CapraFlo growth OS</h3>
-        <p>Bundles, Subscribe &amp; Save, Loyalty, and Affiliate — embedded in Admin with Site modes and CapraFlo AI as the control plane for the money path.</p>
-        <div class="mini-grid">
-          <div class="mini-chip"><b>Bundles</b><span>Volume &amp; mix tiers via automatic discounts</span></div>
-          <div class="mini-chip"><b>Subscribe &amp; Save</b><span>Native Shopify selling plans on the PDP</span></div>
-          <div class="mini-chip"><b>Loyalty</b><span>Points and VIP after orders/paid</span></div>
-          <div class="mini-chip"><b>Affiliate</b><span>Creator referral capture + Admin partners</span></div>
-        </div>
-      </article>
-      <article class="prod-card">
-        <span class="tag tag-lock">CapraFlo · Locked</span>
-        <h3>Site modes + CapraFlo AI</h3>
-        <p>Five one-click modes. AI preview, then Yes I agree → selling plans + discounts sync through Admin GraphQL.</p>
-        <ul>
-          <li>DTC Growth · Mobile Conversion</li>
-          <li>Subscribe-Led · Loyalty-Led</li>
-          <li>Creator / Affiliate-Led</li>
-          <li>Staged preview before writes</li>
-        </ul>
-      </article>
-      <article class="prod-card">
-        <span class="tag tag-prop">Proposed</span>
-        <h3>CapraCred</h3>
-        <p>Proposed reviews / UGC on the product page — social proof at the decision moment, theme-friendly beside CapraFlo.</p>
-        <ul>
-          <li>PDP-native review widget</li>
-          <li>Moderation &amp; UGC capture</li>
-          <li>Designed to sit beside CapraFlo</li>
-          <li>Suite pricing when available</li>
-        </ul>
-      </article>
-      <article class="prod-card span-2">
-        <span class="tag tag-prop">Proposed</span>
-        <h3>CapraBoost</h3>
-        <p>Post-purchase upsells on the thank-you surface — one clear offer after checkout, built as a Capra companion to CapraFlo’s money path. Compounds AOV without interrupting the purchase itself.</p>
-        <ul>
-          <li>Thank-you / checkout UI extension</li>
-          <li>Single warm offer, not checkout friction</li>
-          <li>Aligned with CapraFlo Site modes</li>
-          <li>Suite pricing when available</li>
-        </ul>
-      </article>
-      <article class="prod-card span-2">
-        <span class="tag tag-suite">Suite</span>
-        <h3>Why the stack stays coherent</h3>
-        <p>Typical growth stacks bolt reviews, subscriptions, and upsells together — and pay for each. Capra Suite is designed so CapraFlo carries the core OS while CapraCred and CapraBoost complete the path without Frankenstein pricing or theme fights.</p>
-        <ul>
-          <li>One Partner app for CapraFlo commerce</li>
-          <li>Native Shopify checkout — no parallel cart</li>
-          <li>~$99 Growth vs ~$144 bolted stack</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section showcase" id="showcase">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Product showcase</div>
-      <h2>Surfaces that look like the real product</h2>
-      <p class="sub">CSS mockups of Admin Site modes, CapraCred on the PDP, and CapraBoost on thank-you — the three moments that matter.</p>
-    </div>
-    <div class="showcase-grid">
-      <div class="suite-mock">
-        <div class="suite-mock-head"><i></i> CapraFlo · Admin · Site modes</div>
-        <div class="suite-mock-body admin-modes">
-          <div class="am-row on"><b>DTC Growth</b><div class="toggle"></div></div>
-          <div class="am-row"><b>Subscribe-Led</b><div class="toggle"></div></div>
-          <div class="am-row"><b>Loyalty-Led</b><div class="toggle"></div></div>
-          <div class="am-row"><b>Creator / Affiliate</b><div class="toggle"></div></div>
-          <div class="sync-bar">✓ Selling plans + discounts synced</div>
-        </div>
-      </div>
-      <div class="suite-mock">
-        <div class="suite-mock-head"><i></i> CapraCred · PDP</div>
-        <div class="suite-mock-body pdp-mock">
-          <div class="pdp-img">Product media</div>
-          <div class="pdp-name">Daily Wellness Bundle</div>
-          <div class="pdp-price">$48 · Subscribe &amp; Save 15%</div>
-          <div class="cred-box">
-            <div class="stars">★★★★★</div>
-            <p>“Best purchase this year. CapraCred reviews made it easy.”</p>
+          <h3>CapraFlo</h3>
+          <p>Growth OS: Bundles, Subscribe &amp; Save, Loyalty, Affiliate, Site modes, and CapraFlo AI — one embedded Admin hub.</p>
+          <div class="mini-grid">
+            <div class="mini-chip"><b>Bundles</b><span>Volume &amp; mix tiers</span></div>
+            <div class="mini-chip"><b>Subscribe</b><span>Native selling plans</span></div>
+            <div class="mini-chip"><b>Loyalty</b><span>Points after paid</span></div>
+            <div class="mini-chip"><b>Affiliate</b><span>Creators &amp; codes</span></div>
           </div>
-          <div class="plan-opts">
-            <div class="plan-opt">One-time</div>
-            <div class="plan-opt on">Subscribe</div>
-            <div class="plan-opt">Bundle</div>
-          </div>
-          <div class="atc">Add to cart</div>
-        </div>
-      </div>
-      <div class="suite-mock">
-        <div class="suite-mock-head"><i></i> CapraBoost · Thank-you</div>
-        <div class="suite-mock-body ty-mock">
-          <div class="ty-check">✓</div>
-          <div class="ty-title">Order confirmed</div>
-          <div class="ty-sub">#1042 · Thank you for your purchase</div>
-          <div class="boost-offer">
-            <div class="bo-label">CapraBoost · One more offer</div>
-            <b>Add Travel Pack — 20% off</b>
-            <p>Only available on this thank-you page.</p>
-            <span class="bo-btn">Add to order</span>
-          </div>
-          <div class="skip">No thanks · continue to store</div>
-        </div>
+          <span class="more">Open CapraFlo →</span>
+        </a>
+        <a class="prod-tile" href="products.html#capracred">
+          <span class="tag tag-prop">Proposed</span>
+          <h3>CapraCred</h3>
+          <p>Reviews and UGC on the product page — social proof at the decision, theme-friendly beside CapraFlo.</p>
+          <span class="more">Open CapraCred →</span>
+        </a>
+        <a class="prod-tile" href="products.html#capraboost">
+          <span class="tag tag-prop">Proposed</span>
+          <h3>CapraBoost</h3>
+          <p>One thank-you offer after checkout. Lift AOV without a second checkout product in the stack.</p>
+          <span class="more">Open CapraBoost →</span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section pricing" id="pricing">
-  <div class="container">
-    <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;max-width:560px">
-      <div class="eyebrow" style="justify-content:center">CapraFlo pricing · Locked</div>
-      <h2>Clear tiers. No Frankenstein bill.</h2>
-      <p class="sub" style="margin:0 auto">CapraFlo pricing is locked for private preview. CapraCred and CapraBoost are proposed — talk to Support Wellness Global for suite packaging.</p>
-    </div>
-    <div class="divider-label">CapraFlo · Locked</div>
-    <div class="pricing-wrap">
-      <div class="price-card">
-        <div class="tier">Free</div>
-        <div class="amount"><span class="cur">$</span>0</div>
-        <div class="period">Locked · explore CapraFlo</div>
-        <ul>
-          <li>Admin install</li>
-          <li>Site mode preview</li>
-          <li>Limited sync</li>
-          <li>Private preview access</li>
-        </ul>
-        <a class="cta" href="mailto:will.wiedenmann@gmail.com">Request access</a>
-      </div>
-      <div class="price-card">
-        <div class="tier">Starter</div>
-        <div class="amount"><span class="cur">$</span>59</div>
-        <div class="period">per month · Locked</div>
-        <ul>
-          <li>Bundles</li>
-          <li>Subscribe &amp; Save</li>
-          <li>Theme blocks</li>
-          <li>Email support</li>
-        </ul>
-        <a class="cta" href="mailto:will.wiedenmann@gmail.com">Request access</a>
-      </div>
-      <div class="price-card popular">
-        <span class="pop-badge">Most chosen</span>
-        <div class="tier">Growth</div>
-        <div class="amount"><span class="cur">$</span>99</div>
-        <div class="period">per month · Full CapraFlo OS</div>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Loyalty + Affiliate</li>
-          <li>CapraFlo AI preview</li>
-          <li>All Site modes</li>
-          <li>Automatic discounts</li>
-        </ul>
-        <a class="cta" href="mailto:will.wiedenmann@gmail.com">Request access</a>
-      </div>
-      <div class="price-card">
-        <div class="tier">Scale</div>
-        <div class="amount"><span class="cur">$</span>299</div>
-        <div class="period">per month · Locked</div>
-        <ul>
-          <li>Everything in Growth</li>
-          <li>Higher limits</li>
-          <li>Priority support</li>
-          <li>Advanced Affiliate</li>
-        </ul>
-        <a class="cta" href="mailto:will.wiedenmann@gmail.com">Request access</a>
-      </div>
-      <div class="price-card">
-        <div class="tier">Enterprise</div>
-        <div class="amount" style="font-size:1.55rem">Custom</div>
-        <div class="period">Locked · talk to SWG</div>
-        <ul>
-          <li>Custom limits</li>
-          <li>Dedicated support</li>
-          <li>Suite packaging</li>
-          <li>Onboarding with SWG</li>
-        </ul>
-        <a class="cta" href="mailto:will.wiedenmann@gmail.com">Contact SWG</a>
+  <section class="cta-band on-bone">
+    <div class="container">
+      <h2>Ready for a private walkthrough?</h2>
+      <p>We are not claiming App Store listing. Support Wellness Global invites merchants into CapraFlo, then layers CapraCred and CapraBoost when the suite is packaged.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="mailto:will.wiedenmann@gmail.com">Request private preview</a>
+        <a class="btn btn-ghost btn-lg" href="case-studies.html">Read illustrative cases</a>
       </div>
     </div>
-    <div class="proposed-note">
-      <strong style="color:var(--text)">CapraCred</strong> and <strong style="color:var(--text)">CapraBoost</strong> are <strong style="color:var(--amber)">Proposed</strong> —
-      suite packaging when available. Reach
-      <a href="mailto:will.wiedenmann@gmail.com">Support Wellness Global</a>.
-    </div>
-    <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;max-width:520px;margin-bottom:28px">
-      <h2 style="font-size:clamp(1.4rem,2.5vw,1.85rem)">~$99 vs ~$144</h2>
-      <p class="sub" style="margin:0 auto">Typical growth stacks bolt reviews, subscriptions, and upsells together. Capra Suite is designed so CapraFlo Growth carries the core OS while Cred + Boost complete the path.</p>
-    </div>
-    <div class="stack-compare">
-      <div class="stack-box loser">
-        <div class="stack-label">Bolted stack</div>
-        <div class="stack-sub">Separate apps · theme fights</div>
-        <div class="stack-total">~$144</div>
-        <ul>
-          <li><span>Subscriptions app</span><span>~$49</span></li>
-          <li><span>Reviews app</span><span>~$39</span></li>
-          <li><span>Upsell / thank-you</span><span>~$29</span></li>
-          <li><span>Loyalty bolt-on</span><span>~$27</span></li>
-          <li><span>Integration tax &amp; theme fights</span><span>∞</span></li>
-        </ul>
-      </div>
-      <div class="stack-box winner">
-        <div class="stack-label">Capra Suite</div>
-        <div class="stack-sub">CapraFlo Growth · Cred + Boost proposed</div>
-        <div class="stack-total">~$99</div>
-        <ul>
-          <li><span>CapraFlo Growth (Locked)</span><span>$99</span></li>
-          <li><span>Bundles · S&amp;S · Loyalty · Affiliate</span><span>Incl.</span></li>
-          <li><span>Site modes + CapraFlo AI</span><span>Incl.</span></li>
-          <li><span>CapraCred (Proposed)</span><span>Suite</span></li>
-          <li><span>CapraBoost (Proposed)</span><span>Suite</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-tight surfaces" id="surfaces">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Store surfaces</div>
-      <h2>Where Capra touches the store</h2>
-      <p class="sub">Admin, theme, proxy, thank-you, and webhooks — the surfaces CapraFlo uses so merchants stay inside native Shopify.</p>
-    </div>
-    <div class="surf-grid">
-      <div class="surf-card">
-        <div class="surf-icon">▣</div>
-        <h3>Admin</h3>
-        <p>Embedded CapraFlo app — Site modes, Bundles, Subscribe, Loyalty, Affiliate, Settings.</p>
-      </div>
-      <div class="surf-card">
-        <div class="surf-icon">◈</div>
-        <h3>Theme blocks</h3>
-        <p>Product &amp; cart blocks that read the active Site mode and selling plans.</p>
-      </div>
-      <div class="surf-card">
-        <div class="surf-icon">⇄</div>
-        <h3>App proxy</h3>
-        <p>Storefront routes through CapraFlo without leaving the merchant domain.</p>
-        <code>/apps/capraflow</code>
-      </div>
-      <div class="surf-card">
-        <div class="surf-icon">✓</div>
-        <h3>Thank-you</h3>
-        <p>CapraBoost proposed upsell surface after checkout — warm offer, native flow.</p>
-      </div>
-      <div class="surf-card">
-        <div class="surf-icon">⚡</div>
-        <h3>Webhooks</h3>
-        <p>Orders/paid, subscriptions, and loyalty events keep CapraFlo in sync.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section agency" id="agency">
-  <div class="container agency-inner">
-    <div>
-      <div class="eyebrow">Support Wellness Global</div>
-      <h2>Built by SWG. Private preview, invite-based.</h2>
-      <p class="lead" style="margin-top:14px">Support Wellness Global (SWG) builds Capra Suite: CapraFlo, CapraCred, and CapraBoost. Private preview access is invite-based. We are not claiming App Store listing — when you’re ready, we walk the install → AI preview → Site mode → money path with you.</p>
-      <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px">
-        <a class="btn btn-primary" href="mailto:will.wiedenmann@gmail.com">Email Will</a>
-        <a class="btn btn-ghost" href="#how">Review how it works</a>
-      </div>
-    </div>
-    <div class="agency-card">
-      <div class="ac-row"><span>Studio</span><span>Support Wellness Global (SWG)</span></div>
-      <div class="ac-row"><span>Contact</span><span><a href="mailto:will.wiedenmann@gmail.com">will.wiedenmann@gmail.com</a></span></div>
-      <div class="ac-row"><span>Status</span><span style="color:var(--amber)">Private preview</span></div>
-      <div class="ac-row"><span>CapraFlo</span><span style="color:var(--mint)">Locked</span></div>
-      <div class="ac-row"><span>CapraCred</span><span style="color:var(--amber)">Proposed</span></div>
-      <div class="ac-row"><span>CapraBoost</span><span style="color:var(--amber)">Proposed</span></div>
-      <div class="ac-row"><span>App Store</span><span>Not live</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container">
-    <h2>Ready for the money path?</h2>
-    <p>CapraFlo Locked from Free $0 to Enterprise Custom. CapraCred and CapraBoost Proposed. Stack economics that favor ~$99 over ~$144.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary btn-lg" href="mailto:will.wiedenmann@gmail.com">Request private preview</a>
-      <a class="btn btn-ghost btn-lg" href="#how">Review how it works</a>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -1270,24 +222,31 @@ h1, h2, h3, .display {
           <img src="logo.jpeg" width="28" height="28" alt="">
           Capra Suite
         </div>
-        <p class="footer-copy">CapraFlo, CapraCred, and CapraBoost — by Support Wellness Global (SWG). Private preview marketing site. Not affiliated with Shopify Inc. beyond standard Partner / app development.</p>
+        <p class="footer-copy">CapraFlo, CapraCred, and CapraBoost — by Support Wellness Global. Private preview marketing site. Not affiliated with Shopify Inc. beyond standard Partner / app development.</p>
       </div>
       <div>
         <h4>Product</h4>
         <div class="footer-links">
-          <a href="#how">How it works</a>
-          <a href="#products">Key products</a>
-          <a href="#showcase">Showcase</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#surfaces">Store surfaces</a>
+          <a href="products.html">Products</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+      <div>
+        <h4>Proof</h4>
+        <div class="footer-links">
+          <a href="case-studies.html">Case studies</a>
+          <a href="showcase.html">Storefront examples</a>
+          <a href="products.html#capraflo">CapraFlo modules</a>
         </div>
       </div>
       <div>
         <h4>Contact</h4>
         <div class="footer-links">
           <a href="mailto:will.wiedenmann@gmail.com">will.wiedenmann@gmail.com</a>
-          <a href="#agency">Support Wellness Global</a>
-          <a href="#pricing">CapraFlo Locked pricing</a>
+          <a href="how-it-works.html#agency">Support Wellness Global</a>
+          <a href="pricing.html">CapraFlo Locked pricing</a>
         </div>
       </div>
     </div>
@@ -1298,17 +257,6 @@ h1, h2, h3, .display {
     </div>
   </div>
 </footer>
-
-<script>
-(function () {
-  var nav = document.getElementById("nav");
-  if (!nav) return;
-  var onScroll = function () {
-    nav.classList.toggle("is-scrolled", window.scrollY > 12);
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-})();
-</script>
+<script src="nav.js"></script>
 </body>
 </html>
